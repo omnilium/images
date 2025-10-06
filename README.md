@@ -1,5 +1,7 @@
 # Images
 
+[![ci](https://ci.omni.ms/api/badges/3/status.svg)](https://ci.omni.ms/repos/3)
+
 Custom Docker images for various purposes.
 
 ## License
