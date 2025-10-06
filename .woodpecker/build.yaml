@@ -10,7 +10,6 @@ steps:
 - name: build
   image: woodpeckerci/plugin-kaniko:latest
   settings:
-    dry-run: true
     registry: https://git.omni.ms
     repo: omnilium/${IMAGE}
     username:
