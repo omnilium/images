@@ -10,7 +10,7 @@ steps:
 - name: publish
   image: woodpeckerci/plugin-kaniko:latest
   settings:
-    registry: https://git.omni.ms
+    registry: git.omni.ms
     repo: omnilium/${IMAGE}
     username:
       from_secret: podman_registry_username
