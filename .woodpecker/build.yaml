@@ -1,18 +1,18 @@
 when:
-- event: tag
+- event: push
+  branch: main
 
 matrix:
   IMAGE:
   - toolbox
 
 steps:
-- name: publish
+- name: build
   image: woodpeckerci/plugin-kaniko:latest
   when:
-  - event: tag
-    ref: ${IMAGE}-*
+  - path: ${IMAGE}/*
   settings:
-    dry-run: false
+    dry-run: true
     registry: git.omni.ms
     repo: omnilium/${IMAGE}
     username:
@@ -20,13 +20,4 @@ steps:
     password:
       from_secret: podman_registry_password
     dockerfile: ${IMAGE}/Dockerfile
-    tags:
-    - latest
-    - ${CI_COMMIT_TAG##${IMAGE}-}
-
-- name: release
-  image: woodpeckerci/plugin-release:latest
-  settings:
-    api-key:
-      from_secret: forgejo_release_key
-    draft: true
+    tags: latest
