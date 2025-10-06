@@ -9,8 +9,7 @@ steps:
 - name: publish
   image: woodpeckerci/plugin-kaniko:latest
   when:
-  - event: tag
-    ref: '*-${IMAGE}'
+  - path: ${IMAGE}/*
   settings:
     dry-run: false
     registry: git.omni.ms
