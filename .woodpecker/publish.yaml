@@ -7,7 +7,7 @@ matrix:
   - toolbox
 
 steps:
-- name: build
+- name: publish
   image: woodpeckerci/plugin-kaniko:latest
   settings:
     registry: https://git.omni.ms
