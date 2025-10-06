@@ -1,0 +1,19 @@
+when:
+- event: push
+  branch: main
+
+matrix:
+  IMAGE:
+  - toolbox
+
+steps:
+- name: build
+  image: woodpeckerci/plugin-kaniko:latest
+  settings:
+    dry-run: true
+    registry: https://git.omni.ms
+    repo: omnilium/${IMAGE}
+    username: $${PODMAN_REGISTRY_USERNAME}
+    password: $${PODMAN_REGISTRY_PASSWORD}
+    dockerfile: ${IMAGE}/Dockerfile
+    tags: latest
