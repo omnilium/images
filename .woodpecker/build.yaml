@@ -13,7 +13,9 @@ steps:
     dry-run: true
     registry: https://git.omni.ms
     repo: omnilium/${IMAGE}
-    username: $${PODMAN_REGISTRY_USERNAME}
-    password: $${PODMAN_REGISTRY_PASSWORD}
+    username:
+      from_secret: podman_registry_username
+    password:
+      from_secret: podman_registry_password
     dockerfile: ${IMAGE}/Dockerfile
     tags: latest
