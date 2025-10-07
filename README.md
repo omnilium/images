@@ -1,21 +1,42 @@
-# Images
 
-[![ci](https://ci.omni.ms/api/badges/3/status.svg)](https://ci.omni.ms/repos/3)
+# Omnilium Images
 
-Custom Docker images for various purposes.
+[![GNU GPLv3](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html) [![CI Status](https://ci.omni.ms/api/badges/3/status.svg)](https://ci.omni.ms/repos/3) ![Latest Release](https://img.shields.io/gitea/v/release/omnilium/images?gitea_url=https%3A%2F%2Fgit.omni.ms&sort=date&display_name=release&style=flat)
+
+Custom [OCI](https://opencontainers.org/) images for various purposes, mostly utilitary in nature.
+
+
+## Images
+
+This repository contains the following images:
+
+- `toolbox` - A lightweight image based on `alpine:3.22` containing `bash`, `curl` and `unzip`.
+
+
+## Reading on GitHub?
+
+This is a read-only mirror for the repository found at https://git.omni.ms/omnilium/images.
+
+Please submit all issues and pull requests there, as none will be accepted here.
+
 
 ## License
 
-Copyright © 2025 Omnilium Advanced Cybernetics SRL.
+`SPDX-License-Identifier: GPL-3.0-or-later`
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+The contents of this repository are licensed under the [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
 
-https://www.apache.org/licenses/LICENSE-2.0
+Copyright (C) 2025  Omnilium Advanced Cybernetics SRL.
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
