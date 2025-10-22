@@ -1,23 +1,24 @@
 when:
-- event: push
-  branch: main
+  - event: push
+    branch: main
 
 matrix:
   IMAGE:
-  - toolbox
+    - node
+    - toolbox
 
 steps:
-- name: build
-  image: woodpeckerci/plugin-kaniko:latest
-  when:
-  - path: ${IMAGE}/*
-  settings:
-    dry-run: true
-    registry: git.omni.ms
-    repo: omnilium/${IMAGE}
-    username:
-      from_secret: podman_registry_username
-    password:
-      from_secret: podman_registry_password
-    dockerfile: ${IMAGE}/Dockerfile
-    tags: latest
+  - name: build
+    image: woodpeckerci/plugin-kaniko:latest
+    when:
+      - path: ${IMAGE}/*
+    settings:
+      dry-run: true
+      registry: git.omni.ms
+      repo: omnilium/${IMAGE}
+      username:
+        from_secret: podman_registry_username
+      password:
+        from_secret: podman_registry_password
+      dockerfile: ${IMAGE}/Dockerfile
+      tags: latest
