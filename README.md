@@ -10,7 +10,7 @@ Custom [OCI](https://opencontainers.org/) images for various purposes, mostly ut
 
 This repository contains the following images:
 
-- `node` - Build image for NodeJS applications. Includes PNPM.
+- `node` - Build image based on `node:22` containing `pnpm`.
 - `toolbox` - A lightweight image based on `alpine:3.22` containing `bash`, `curl` and `unzip`.
 
 
