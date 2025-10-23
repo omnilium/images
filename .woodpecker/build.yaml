@@ -10,6 +10,7 @@ matrix:
 steps:
   - name: build
     image: woodpeckerci/plugin-kaniko:latest
+    pull: true
     when:
       - path: ${IMAGE}/*
     settings:
