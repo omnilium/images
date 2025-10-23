@@ -6,6 +6,7 @@ LABEL description="Lightweight toolbox image with various commonly used tools."
 RUN apk add --no-cache \
     bash \
     curl \
-    unzip
+    unzip \
+    zip
 
 ENTRYPOINT [ "bash" ]
