@@ -1,7 +1,5 @@
 FROM node:22
 
-# Test
-
 LABEL maintainer="contact@omnilium.com"
 LABEL description="Build image for NodeJS applications. Includes PNPM."
 
